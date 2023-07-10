@@ -1,0 +1,116 @@
+services:
+  video-service-db:
+    container_name: video-service-db
+    image: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+      - video-service-db:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    networks:
+      - postgres
+    restart: unless-stopped
+  user-service-db:
+    container_name: user-service-db
+    image: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+      - user-service-db:/data/postgres
+    ports:
+      - "5433:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+  authentication-service-db:
+    container_name: authentication-service-db
+    image: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+      - authentication-service-db:/data/postgres
+    ports:
+      - "5434:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+  posts-service-db:
+    container_name: posts-service-db
+    image: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+      - posts-service-db:/data/postgres
+    ports:
+      - "5435:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+  subscription-service-db:
+    container_name: subscription-service-db
+    image: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+      - subscription-service-db:/data/postgres
+    ports:
+      - "5436:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+  notification-service-db:
+    container_name: notification-service-db
+    image: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+      - notification-service-db:/data/postgres
+    ports:
+      - "5437:5432/tcp"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+
+networks:
+  postgres:
+    driver: bridge
+
+
+volumes:
+  postgres:
+  pgadmin:
+  video-service-db:
+  notification-service-db:
+  subscription-service-db:
+  posts-service-db:
+  authentication-service-db:
+  user-service-db:
