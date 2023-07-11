@@ -1,4 +1,4 @@
-package ru.hackers;
+package ru.hackers.subscr;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
-public class PostsServiceApplication
+public class SubscriptionServiceApplication
 {
     public static void main( String[] args )
     {
-        SpringApplication.run(PostsServiceApplication.class);
+        SpringApplication.run(SubscriptionServiceApplication.class);
     }
 }

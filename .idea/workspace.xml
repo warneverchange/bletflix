@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6499f0d-9dc3-4a95-a51b-d22f9f186c60" name="Changes" comment="building base">
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/hackers/auth/controllers/GreetingControllers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feign-clients/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feign-clients/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feign-clients/src/main/java/ru/hackers/clients/auth/AuthClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feign-clients/src/test/java/ru/hackers/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/ru/hackers/notifications/controllers/GreetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="f6499f0d-9dc3-4a95-a51b-d22f9f186c60" name="Changes" comment="testing + removed user-service-db docker-container">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/java/ru/hackers/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/java/ru/hackers/eureka/EurekaServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/ru/hackers/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/ru/hackers/notifications/NotificationServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +169,7 @@
       <workItem from="1688498172654" duration="1728000" />
       <workItem from="1688586194442" duration="1178000" />
       <workItem from="1689009615756" duration="10065000" />
-      <workItem from="1689100815903" duration="1905000" />
+      <workItem from="1689100815903" duration="2619000" />
     </task>
     <task id="LOCAL-00001" summary="building base">
       <created>1689009810052</created>
@@ -189,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689009810052</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="testing + removed user-service-db docker-container">
+      <created>1689103753046</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689103753046</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +193,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="building base" />
-    <option name="LAST_COMMIT_MESSAGE" value="building base" />
+    <MESSAGE value="testing + removed user-service-db docker-container" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing + removed user-service-db docker-container" />
   </component>
 </project>
