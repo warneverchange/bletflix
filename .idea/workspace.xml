@@ -4,52 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6499f0d-9dc3-4a95-a51b-d22f9f186c60" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/hackers/auth/AuthServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/test/java/ru/hackers/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/java/ru/hackers/EurekaServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/test/java/ru/hackers/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/ru/hackers/NotificationServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/test/java/ru/hackers/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts-service/src/main/java/ru/hackers/PostsServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts-service/src/test/java/ru/hackers/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscr-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscr-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscr-service/src/main/java/ru/hackers/SubscriptionServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscr-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/subscr-service/src/test/java/ru/hackers/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/ru/hackers/UserServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/test/java/ru/hackers/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-service/src/main/java/ru/hackers/VideoServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-service/src/main/java/ru/hackers/controllers/GreetingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video-service/src/test/java/ru/hackers/AppTest.java" afterDir="false" />
+    <list default="true" id="f6499f0d-9dc3-4a95-a51b-d22f9f186c60" name="Changes" comment="building base">
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/hackers/auth/controllers/GreetingControllers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feign-clients/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feign-clients/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feign-clients/src/main/java/ru/hackers/clients/auth/AuthClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feign-clients/src/test/java/ru/hackers/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/ru/hackers/notifications/controllers/GreetingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/java/ru/hackers/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/java/ru/hackers/eureka/EurekaServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/ru/hackers/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/ru/hackers/notifications/NotificationServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -100,8 +68,8 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "d5a47c7ee1fe66311734a52a56f40d7b",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
+    "spring.configuration.checksum": "2b60366e04ae8f36a5701717677afae6",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -117,7 +85,15 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthServiceApplication">
+  <component name="RunManager" selected="Spring Boot.VideoServiceApplication">
+    <configuration name="All in eureka-server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="eureka-server" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="auth-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.hackers.auth.AuthServiceApplication" />
@@ -133,10 +109,10 @@
     </configuration>
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="eureka-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.hackers.EurekaServerApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.hackers.eureka.EurekaServerApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.hackers.*" />
+          <option name="PATTERN" value="ru.hackers.eureka.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,25 +120,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubscriptionServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="subscr-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.hackers.SubscriptionServiceApplication" />
+    <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="notification-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.hackers.notifications.NotificationServiceApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.hackers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="user-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.hackers.UserServiceApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.hackers.*" />
+          <option name="PATTERN" value="ru.hackers.notifications.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -191,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.UserServiceApplication" />
-        <item itemvalue="Spring Boot.SubscriptionServiceApplication" />
-        <item itemvalue="Spring Boot.AuthServiceApplication" />
         <item itemvalue="Spring Boot.VideoServiceApplication" />
+        <item itemvalue="Spring Boot.NotificationServiceApplication" />
+        <item itemvalue="Spring Boot.AuthServiceApplication" />
         <item itemvalue="Spring Boot.EurekaServerApplication" />
+        <item itemvalue="JUnit.All in eureka-server" />
       </list>
     </recent_temporary>
   </component>
@@ -216,10 +179,24 @@
       <workItem from="1688477316516" duration="5300000" />
       <workItem from="1688498172654" duration="1728000" />
       <workItem from="1688586194442" duration="1178000" />
+      <workItem from="1689009615756" duration="10065000" />
+      <workItem from="1689100815903" duration="1905000" />
     </task>
+    <task id="LOCAL-00001" summary="building base">
+      <created>1689009810052</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689009810052</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="building base" />
+    <option name="LAST_COMMIT_MESSAGE" value="building base" />
   </component>
 </project>
