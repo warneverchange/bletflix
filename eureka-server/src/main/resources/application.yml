@@ -1,7 +1,8 @@
 spring:
   application:
     name: eureka-server
-
+  config:
+    import: optional:configserver:config-server
 server:
   port: 8761
 
@@ -11,3 +12,5 @@ eureka:
     register-with-eureka: false
   instance:
     prefer-ip-address: true
+
+
