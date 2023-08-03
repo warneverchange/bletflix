@@ -1,5 +1,30 @@
+
 spring:
+  datasource:
+    username: admin
+    password: adminka
+    url: jdbc:postgresql://bletflix-db:5432/postgres
   application:
     name: user-service
-  config:
-    import: optional:configserver:http://localhost:8888
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+    enabled: true
+
+#fixme: retrieve port from env
+server:
+  port:
+    8085

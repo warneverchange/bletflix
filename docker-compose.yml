@@ -1,4 +1,73 @@
 services:
+
+  eureka-server:
+    container_name: eureka-server
+    build: ./eureka-server
+    ports:
+      - "8761:8761"
+    depends_on:
+      - bletflix-db
+    networks:
+      - postgres
+
+  auth-service:
+    container_name: auth-service
+    build: ./auth-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - eureka-server
+    networks:
+      - postgres
+
+  notification-service:
+    container_name: notification-service
+    build: ./notification-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - eureka-server
+    networks:
+      - postgres
+
+  posts-service:
+    container_name: posts-service
+    build: ./posts-service
+    ports:
+      - "8083:8083"
+    depends_on:
+      - eureka-server
+    networks:
+      - postgres
+
+  subscr-service:
+    container_name: subscr-service
+    build: ./subscr-service
+    ports:
+      - "8084:8084"
+    depends_on:
+      - eureka-server
+    networks:
+      - postgres
+
+  user-service:
+    container_name: user-service
+    build: ./user-service
+    ports:
+      - "8085:8085"
+    depends_on:
+      - eureka-server
+    networks:
+      - postgres
+
+  video-service:
+    container_name: video-service
+    build: ./video-service
+    ports:
+      - "8086:8086"
+    depends_on:
+      - eureka-server
+
   bletflix-db:
     container_name: bletflix-db
     image: postgres
@@ -28,7 +97,8 @@ services:
     networks:
       - postgres
     restart: unless-stopped
-
+    depends_on:
+      - bletflix-db
 networks:
   postgres:
     driver: bridge
