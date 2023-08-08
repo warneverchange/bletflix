@@ -10,7 +10,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  *
  */
 
-@EnableFeignClients(basePackages = "ru.hackers.clients")
 @SpringBootApplication
 public class NotificationServiceApplication
 {

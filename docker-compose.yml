@@ -4,18 +4,11 @@ services:
     container_name: eureka-server
     ports:
       - "8761:8761"
-    networks:
-      - postgres
-
-  config-server:
-    image: bletflix/config-server:latest
-    container_name: config-server
-    ports:
-      - "8888:8888"
-    networks:
-      - postgres
     depends_on:
-      - eureka-server
+      - bletflix-db
+    networks:
+      - postgres
+    restart: unless-stopped
 
   auth-service:
     image: bletflix/auth-service:latest
@@ -25,7 +18,8 @@ services:
     networks:
       - postgres
     depends_on:
-      - config-server
+      - eureka-server
+    restart: unless-stopped
 
   notification-service:
     image: bletflix/notification-service:latest
@@ -35,7 +29,8 @@ services:
     networks:
       - postgres
     depends_on:
-      - config-server
+      - eureka-server
+    restart: unless-stopped
 
   posts-service:
     image: bletflix/posts-service:latest
@@ -45,7 +40,8 @@ services:
     networks:
       - postgres
     depends_on:
-      - config-server
+      - eureka-server
+    restart: unless-stopped
 
   subscr-service:
     image: bletflix/subscr-service:latest
@@ -55,7 +51,8 @@ services:
     networks:
       - postgres
     depends_on:
-      - config-server
+      - eureka-server
+    restart: unless-stopped
 
   user-service:
     image: bletflix/user-service:latest
@@ -65,7 +62,8 @@ services:
     networks:
       - postgres
     depends_on:
-      - config-server
+      - eureka-server
+    restart: unless-stopped
 
   video-service:
     image: bletflix/video-service:latest
@@ -75,7 +73,8 @@ services:
     networks:
       - postgres
     depends_on:
-      - config-server
+      - eureka-server
+    restart: unless-stopped
 
   bletflix-db:
     container_name: bletflix-db
