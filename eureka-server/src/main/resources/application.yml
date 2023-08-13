@@ -1,6 +1,20 @@
 spring:
   application:
     name: eureka-server
+  datasource:
+    username: admin
+    password: adminka
+    url: jdbc:postgresql://bletflix-db:5432/postgres
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  liquibase:
+    change-log: classpath:/../../../../db/changelog/db.changelog-master.xml
 server:
   port: 8761
 

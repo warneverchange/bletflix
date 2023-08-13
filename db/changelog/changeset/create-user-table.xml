@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="create-user-table" author="chechkin.kn">
+        <createTable tableName="user" schemaName="public">
+            <column name="id" type="integer">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="username" type="varchar(255)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="hashed_password" type="varchar(60)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="first_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="varchar(320)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="icn_src" type="varchar(512)">
+                <constraints nullable="true" unique="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="user-table-add-auto-increment-on-primary-key" author="chechkin.kn">
+        <addAutoIncrement
+                tableName="user"
+                columnName="id"
+                columnDataType="integer"
+                defaultOnNull="false"
+                generationType="ALWAYS"
+                incrementBy="1"
+                schemaName="public"
+        />
+    </changeSet>
+    <changeSet id="user-table-add-full-name-index" author="chechkin.kn">
+        <createIndex
+                tableName="user"
+                indexName="idx_user_full_name"
+                clustered="true"
+                schemaName="public"
+                unique="false"
+        >
+            <column name="first_name" descending="false"/>
+            <column name="last_name" descending="false"/>
+        </createIndex>
+    </changeSet>
+    <changeSet id="user-table-add-username-index" author="chechkin.kn">
+        <createIndex
+                tableName="user"
+                indexName="idx_user_username"
+                clustered="false"
+                schemaName="public"
+                unique="true"
+        >
+            <column name="username"/>
+        </createIndex>
+    </changeSet>
+</databaseChangeLog>

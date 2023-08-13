@@ -10,6 +10,12 @@ services:
       - postgres
     restart: unless-stopped
 
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
   auth-service:
     image: bletflix/auth-service:latest
     container_name: auth-service
